@@ -4,4 +4,4 @@ The [MNIST database](http://yann.lecun.com/exdb/mnist/) was used for training. T
 
 To solve the problem `keras` package was used in R with TensorFlow backend (GPU edition).
 
-This model had a score(categorization accuracy) of __0.99386__ on Kaggle.
+This model had a score(categorization accuracy) of __0.99386__ on [Kaggle](https://www.kaggle.com/c/digit-recognizer).
