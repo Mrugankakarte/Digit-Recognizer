@@ -1,14 +1,5 @@
 library(keras)
 
-### Display digits ########################################################################
-
-displayDigit <- function(X){
-      m <- matrix(unlist(X),nrow = 28,byrow = T)
-      m <- t(apply(m, 2, rev))
-      image(m,col=grey.colors(255))
-}
-
-
 ### Reading ##################################################################
 
 # For training, keras has built in MNIST datset
@@ -27,7 +18,7 @@ train.y <- mnist$train$y
 valid.x <- mnist$test$x
 valid.y <- mnist$test$y
 
-train_img <- array(train.x, dim = c(dim(train.x), 1))/255   # normalizing and adding ome more dimension
+train_img <- array(train.x, dim = c(dim(train.x), 1))/255   # normalizing and adding one more dimension
 train.label <- to_categorical(train.y, 10)                  # one-hot encoding labels
 
 valid_img <- array(valid.x, dim = c(dim(valid.x), 1))/255
